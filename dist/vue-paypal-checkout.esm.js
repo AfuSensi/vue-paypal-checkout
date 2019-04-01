@@ -171,6 +171,13 @@ var shippingAddressProp = new paypalProp({
   injection: propTypes.TRANSACTION
 });
 
+var customProp = new paypalProp({
+  name: 'custom',
+  paypalName: 'custom',
+  type: String,
+  injection: propTypes.TRANSACTION
+});
+
 var props = [
 // Button Props
 new paypalProp({ name: 'buttonStyle', paypalName: 'style', injection: propTypes.BUTTON }), new paypalProp({ name: 'braintree', injection: propTypes.BUTTON }), new paypalProp({ name: 'locale', type: String, injection: propTypes.BUTTON }),
@@ -193,7 +200,7 @@ new paypalProp({
     );
   },
   injection: propTypes.TRANSACTION
-}), itemsPayPalProp, shippingAddressProp];
+}), itemsPayPalProp, shippingAddressProp,customProp];
 
 function vmProps() {
   var vm = {};
